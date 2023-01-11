@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Source Map Example</title>
+    <style>
+      body {
+        background-color: rgb(32, 32, 32);
+        -webkit-text-fill-color: whitesmoke;
+        font-size: xx-large;
+      }
+      .redHover:hover {
+        background-color: rgb(134, 14, 34);
+      }
+      .blueHover:hover {
+        background-color: rgb(26, 101, 101);
+      }
+      .greenHover:hover {
+        background-color: rgb(19, 81, 19);
+      }
+    </style>
+  </head>
+  <body>
+    <div style="position: absolute; left: 0%; width: 50%; height: 100%;">
+      <pre><code id="srccode"></code></pre>
+    </div>
+    <div style="position: absolute; left: 50%; width: 50%; height: 100%;">
+      <pre><code id="destcode"></code></pre>
+    </div>
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>
