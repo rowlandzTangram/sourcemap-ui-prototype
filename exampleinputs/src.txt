@@ -1,0 +1,14 @@
+module testpackage::v1.testmodule
+
+struct Pos2D {
+  x: int32;
+  y: int32;
+}
+
+function translatePos2D(p: Pos2D) -> int32[] {
+  if (p.x == 0) {
+    [1];
+  } else {
+    [p.x, p.y];
+  };
+}

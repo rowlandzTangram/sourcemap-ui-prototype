@@ -1,0 +1,35 @@
+class Pos2D {
+  Pos2D() {
+    _x = 0;
+    _y = 0;
+  }
+  Pos2D& operator=(const Pos2D& that) {
+    this->copy(that);
+    return *this;
+  }
+  Pos2D(const Pos2D& that) : Pos2D() {
+    if (this == &that) return;
+    this->copy(that);
+  }
+  virtual void copy(const Pos2D& from) {
+    this->_x = from._x;
+    this->_y = from._y;
+  }
+  ~Pos2D() {
+
+  }
+  int32_t _x;
+  int32_t _y;
+}
+
+std::vector<int32_t> Pos2DToArray(testpackage::v1.testmodule.Pos2D p) {
+  std::vector<int32_t> if_res;
+  if ((p->_x == static_cast<int32_t>(INT32_C(0)))) {
+    std::vector<int32_t> vec = {static_cast<int32_t>(INT32_C(1))};
+    if_res = vec;
+  } else {
+    std::vector<int32_t> vec = {p->_x, p->_y};
+    if_res = vec;
+  }
+  return if_res;
+}
